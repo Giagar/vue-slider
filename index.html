@@ -23,7 +23,7 @@
                         <i class="fas fa-angle-right" @click="next"></i>
                     </div>
                     <div class="nav">
-                        <i v-for="(el, i) in urls.length" class="fas fa-circle" :class="i === index ? 'active' : ''" @click="clickHandler(i)"></i>
+                        <i v-for="(el, i) in urls.length" :class="'fas fa-circle ' + (i === index ? 'active' : '')" @click="() => clickHandler(i)"></i>
                     </div>
                 </div>
             </div>
