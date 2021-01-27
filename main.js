@@ -13,7 +13,7 @@ var app = new Vue({
     methods: {
         // funzione che controlla il pulsante prev
         prev: function() {
-            // se sono alla prima img, index torna all'ultima immagine + una posizione (che poi verrà tolta dalla riga seguente)
+            // se sono alla prima img, index torna all'ultima immagine + una posizione (che poi verrà tolta alla riga seguente)
             if (this.index === 0) {
                 this.index = this.urls.length 
             }
@@ -22,10 +22,14 @@ var app = new Vue({
             this.index--;
         },
 
+        // funzione che controlla il pulsante next
         next: function() {
+            // se sono all'ultima img, index torna alla prima - una posizione (che poi verrà aggiunta alla riga seguente)
             if (this.index === (this.urls.length - 1)) {
                 this.index = -1;
             }
+
+            // aggiungo 1 a index
             this.index++;
         },
     }
