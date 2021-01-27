@@ -32,6 +32,12 @@ var app = new Vue({
             // aggiungo 1 a index
             this.index++;
         },
+
+        // funzione che gestisce l'evento click sui pallini
+        clickHandler: function(i) {
+            // prende la i del pallino cliccato (tramite attr su elemento html) e lo passa come nuovo valore di index
+            this.index = i;
+        }
     }
 
 })
